@@ -33,6 +33,13 @@ class DatabaseSeeder extends Seeder
             'role' => 'Admin',
         ]);
 
+        User::create([
+            'name' => 'judha',
+            'email' => 'judha@gmail.com',
+            'password' => bcrypt('123'),
+            'role' => 'Admin',
+        ]);
+
         User::factory()->create([
             'name' => 'Judha',
             'email' => 'judha@gmail.com',
