@@ -32,6 +32,7 @@ use App\Http\Controllers\WorkerDetailController;
 use App\Http\Livewire\Features;
 use App\Http\Livewire\Homepage;
 use App\Models\Project_result;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -130,4 +131,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::resource('/payment', PaymentController::class);
     Route::resource('/balance', BalanceController::class);
     Route::resource('/admin-payment', AdminPaymentController::class);
+});
+
+Route::get('/migrate', function () {
+    Artisan::call('migrate:fresh');
+    Artisan::call('db:seed');
+});
+
+Route::get('/cache-clear', function () {
+    Artisan::call('cache:clear');
 });
