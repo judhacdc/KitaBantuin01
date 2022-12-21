@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        User::factory()->create([
+        User::create([
             'name' => 'Timur',
             'email' => 'timur@gmail.com',
             'password' => bcrypt('123'),
@@ -40,33 +40,33 @@ class DatabaseSeeder extends Seeder
             'role' => 'Admin',
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'Judha',
             'email' => 'judha@gmail.com',
             'password' => bcrypt('123'),
             'role' => 'Admin',
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'Firgi',
             'email' => 'firgi@gmail.com',
             'password' => bcrypt('123'),
             'role' => 'Admin'
         ]);
-        User::factory()->create([
+        User::create([
             'name' => 'Worker',
             'email' => 'worker@gmail.com',
             'password' => bcrypt('123'),
             'role' => 'Worker'
         ]);
-        User::factory()->create([
+        User::create([
             'name' => 'User',
             'email' => 'user@gmail.com',
             'password' => bcrypt('123'),
             'role' => 'User'
         ]);
 
-        Testimoni::factory(10)->create();
+        Testimoni::create();
         $this->call([
             BankUserSeeder::class,
             CategorySeeder::class,
@@ -75,26 +75,26 @@ class DatabaseSeeder extends Seeder
             BankSeeder::class,
             ProjectSeeder::class,
         ]);
-        WorkerDetail::factory()->create([
+        WorkerDetail::create([
             'user_id' => 4,
             'skill' => "Php",
             'status' => 'Accepted',
             'about' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.',
         ]);
-        Portofolio::factory()->create([
+        Portofolio::create([
             'worker_details_id' => 1,
             'title' => 'Gorent',
 
             'link' => 'http://gorent.herokuapp.com/',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.',
         ]);
-        WorkerDetail::factory()->create([
+        WorkerDetail::create([
             'user_id' => 5,
             'skill' => "Php",
             'status' => 'Pending',
             'about' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.',
         ]);
-        Bid::factory()->create([
+        Bid::create([
             'user_id' => 3,
             'project_id' => 1,
             'price' => 100000,
