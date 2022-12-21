@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use Google\Cloud\Storage\StorageClient;
 
 class ProfileController extends Controller
 {
@@ -72,8 +73,6 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
         $validateData = $request->validate([
             // validasi
             'name' => 'required',
@@ -83,7 +82,7 @@ class ProfileController extends Controller
             'phone' => 'required',
             'photo' => 'image|file',
             'bankuser_id' => 'required',
-            'bank_account' => 'required'
+            'bank_account' => 'required',
             // 'bank_account' => 'required',
         ]);
 
@@ -92,18 +91,36 @@ class ProfileController extends Controller
                 Storage::delete('public/' . $request->oldImage);
             }
             $validateData['photo'] = $request->file('photo')->store('profile', 'public');
+            $googleConfigFile = file_get_contents(config_path('googlecloud.json'));
+            $storage = new StorageClient([
+                'keyFile' => json_decode($googleConfigFile, true)
+            ]);
+            $storageBucketName = config('googlecloud.storage_bucket');
+            $bucket = $storage->bucket($storageBucketName);
+
+            $filenameWithExt = $request->file('photo')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('photo')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('photo')->storeAs('public/images/', $filenameSimpan);
+            $savepath = 'public/images/' . $filenameSimpan;
+
+            // save on bucket
+            $fileSource = fopen(storage_path('app/' . $savepath), 'r');
+
+            $bucket->upload($fileSource, [
+                'predefinedAcl' => 'publicRead',
+                'name' => $savepath
+            ]);
         }
 
-        User::where('id', $id)
-            ->update($validateData);
+        User::where('id', $id)->update($validateData);
         Alert::success('Berhasil', 'Profil berhasil di update');
         return redirect('/profile');
     }
 
     public function updateWorker(Request $request, $id)
     {
-
-
         $validateData = $request->validate([
             // validasi
             'name' => 'required',
@@ -113,7 +130,7 @@ class ProfileController extends Controller
             'phone' => 'required',
             'photo' => 'image|file',
             'bankuser_id' => 'required',
-            'bank_account' => 'required'
+            'bank_account' => 'required',
             // 'bank_account' => 'required',
         ]);
 
@@ -124,8 +141,7 @@ class ProfileController extends Controller
             $validateData['photo'] = $request->file('photo')->store('profile', 'public');
         }
 
-        User::where('id', $id)
-            ->update($validateData);
+        User::where('id', $id)->update($validateData);
         Alert::success('Berhasil', 'Profil berhasil di update');
         return redirect('/profile-worker');
     }

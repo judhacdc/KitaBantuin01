@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "starlit-water-364300",
+    "private_key_id": "d823200613d87e937bece12564bc06593b6d0a51",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9UxMiV2YTbG/R\n4OGoVRWWf4jGHr2fjOJay1gwO0IAYueaoFUvCHLgwqdrM8c/SzyTIodIzDmC3MCM\n50p9QlfBFfhb63CHAzVH845GWCs2rAonMyjicJuYDUqE+A89rrjnq0pbquAC4Epc\nhUikHLz7E/jUO4NDHVeUs6K2qN/LHandyuslI4s8MnaAZR6nG9v2oXLYfL3x366O\nhYGlAe0IZg8uxVGDR6a8xeyYUYYMU7tbB7H1P3/saLXkj3Wm+Sv8OqyUegeH3/Yt\nO4/EmiX+jt3fWDoz15aoouByfPsEdqJpIwdIRAdrYdA5mujaKeYio7n6yocBLH9W\nK+kyBcQ5AgMBAAECggEAEs6cjhYTieaeo9rZX9D2We+lke5k1ONe0WxcAHKQ7gJL\nn2TBzlaVa6ltwZL9SvBs5IrfpVL2rzH06/csw0B8M8fWCgxbe2kz3+FpQHV3jLDo\nObIPcJGFWCrEPKBHV0/MU35rEd8c7Xw3A6jddfWnrX0NUPvwE3jObFmwVlsOD2dH\nj45+HccVdye6h1UOyMvCvlro0XR6LYF/Srx5k++4gZLOw2OP1T+v7s/lbe+SB3FC\nEK3gSEvdt3nUJqiUx6SJC24u4dlPAju70SdSaoq5RibOTK0DO6+grVWkl/Tdi/yP\ndK5N/Mi1EfRRvuk4nUnmlp39+4FftskEjZR6mjEvtwKBgQDwKJa89yeVs9W+zu+P\nJyBCppFRtbCPknjKCY9h5Z6wy2mnQfMqJigni3A6jCt+tdhhLpNKvgck7S4WFd6/\no2LVk9vmU31DfiX8Ukmwyd+hE1IBCwaOHXrgN+COxrFMiW18Uk8EKFpeQaluCEKM\naiq3VWnn/8Qyp5gKOorMPpPU4wKBgQDJ0BUb5VsdC84ZoYC1MDEwj7pIMzoD0ZhK\nF20v/b+6QTBgdjtSBiw56CafAqDtj8Faf6GtLNNJ6+2GIWNDouOhRFSJ0HB+NDBf\nnC5Sh4hGx2FqJIU0KIbUCzVa9oR6AsSn0NYF159xFkGROZekN04klcQ2D1MaAk+I\nJNljT74pMwKBgQDi0PLMtYClWptdAoQuZ32IdVh6G2cNsgBykGTiyML/pp26YgcO\nn8r8zizInunVWllqL1rdFGwa7AbCxRUDWYRWwrbE6cU8oT+u9uiyF3cl4eFpKsie\nICmU6jEjp3R8HK9S40nNW2895jXmvdZcV0jQrdLAUkcysCZgQroj/FYSkQKBgHau\nnUtbdVq+j4T5OmTTo4nobGd7YLnQL9warMaVVoRlQ9rmjPou0SF4ygWnGRa7/LyI\n5H6gJt2JFpVT2zlyeKVlNsYZQ56keHIxufgk5lqhdENkmMVUs/3NXaJR6RSLvjTm\nloa3CHgL26FZGjmjoJvZS5tzJa7c/wKUkRdbVPyLAoGAdlCN7VIlBIe+veW1WnQh\nhoGSgIAZ89R0V4M1dXzdLE5GhZYaRBHtpDw1nAQRB0+1ERl1s7MsRyV5JA0h8gqV\n8b1jWhOAHuLsV64ktuMfQfj6z3lMsjaOESXYFnUp+MjqXK9SfyC9vIErYMEorsi5\nP/18XOSUz3FdyON6nInKSD4=\n-----END PRIVATE KEY-----\n",
+    "client_email": "kitabantuin-tubes-cloud@starlit-water-364300.iam.gserviceaccount.com",
+    "client_id": "102620844438487623671",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kitabantuin-tubes-cloud%40starlit-water-364300.iam.gserviceaccount.com"
+}
